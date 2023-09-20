@@ -23,7 +23,7 @@ function Dashboard(){
     return(
         <div id="dashboard">
             <Suspense fallback={null}>
-                <Canvas camera={{position: [0, 10, -120], fov: 22, aspect: 1.77, filmOffset:1.8}} shadows>               
+                <Canvas className='canvas' camera={{position: [0, 10, -120], fov: 22, aspect: 1.77, filmOffset:1.8}} shadows>               
                     <directionalLight intensity={1.5} position={[5,5,-10]} /> 
                     <directionalLight intensity={1.8} position={[-5,5,-10]} />
                     <directionalLight intensity={1.5} position={[0,5,10]} />
@@ -34,8 +34,8 @@ function Dashboard(){
                     <CameraControls position={position} target={target} />  
                 </Canvas>
                 <DataContainerLeft />
-                <DataContainerRight />
-                <ButtonHomeView gotoView={GoToView}/>   
+                <DataContainerRight /> 
+                <ButtonHomeView gotoView={GoToView}/> 
             </Suspense>      
         </div> 
     )

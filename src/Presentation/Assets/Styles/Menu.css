@@ -1,14 +1,11 @@
 .menu-container
 {
-    /* his position */
-    position: absolute;
-    bottom: 145%;
-
     /*config position inner */
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .menu-main-button
 {
     /* Shape */

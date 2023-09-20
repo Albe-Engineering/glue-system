@@ -5,9 +5,7 @@ import Menu from '../Menu/Index';
 function Footer(){
     return(
         <div id='footer'>
-            <div className='bar'>
                 <Menu />
-            </div> 
         </div>
     )
 }
