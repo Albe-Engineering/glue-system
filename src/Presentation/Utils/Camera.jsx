@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 //Camera.tsx
 import { OrbitControls } from "@react-three/drei"
 import { useThree } from "@react-three/fiber"
@@ -41,7 +42,7 @@ const CameraControls = ({ position, target }) => {
 
   useEffect(() => {
     cameraAnimate()
-  }, [target, position])
+  }, [target, position, cameraAnimate])
   return (
     <OrbitControls
       ref={ref}

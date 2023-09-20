@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faChartLine, faExclamationTriangle, faFileCode, faGear} from '@fortawesome/free-solid-svg-icons';
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 
+// eslint-disable-next-line no-lone-blocks
 {/*https://fontawesome.com/search?q=sett&o=r&s=thin */}
 
 function Menu(){

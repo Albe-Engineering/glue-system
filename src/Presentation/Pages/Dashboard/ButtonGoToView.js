@@ -1,3 +1,5 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable no-lone-blocks */
 import annotations from '../../Data/annotations.json'
 import { Html } from '@react-three/drei';
 
