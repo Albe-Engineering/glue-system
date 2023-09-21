@@ -1,6 +1,7 @@
 #DataContainerRight{
-    position: absolute;
+    position: fixed;
     top: 0;
+    bottom: 25px;
     height: 100%;
     right:0;
     width: 15%;
