@@ -4,7 +4,13 @@
   z-index: 99999999; /* serve per far sparire il tooltip sotto di lui nell'immagine 3D */
   text-align: center;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 2%;
 }
+
 .Widget-row{
     display: flex;
     align-items: stretch;
@@ -14,9 +20,33 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    margin: 5%;
+    /* padding: 3%; */
 }
 
 .DataContainer h2{
   margin: 10%;
+}
+
+
+
+@media (max-width:2400px){
+
+}
+@media (max-width:1920px){
+  
+}
+@media (max-width:1500px){
+  
+}
+@media (max-width:1200px){
+  
+}
+@media (max-width:992px){
+  
+}
+@media (max-width:768px){
+  
+}
+@media (max-width:576px){
+  
 }
