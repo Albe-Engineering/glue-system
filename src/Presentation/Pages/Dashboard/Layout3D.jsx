@@ -7,7 +7,7 @@ Command: npx gltfjsx@6.2.5 public/models/DJet.glb
 import { useGLTF } from '@react-three/drei'
 
 export function Layout3D(props) {
-  const { nodes, materials } = useGLTF('models/Layout3D-v2.glb')
+  const { nodes, materials } = useGLTF('./models/Layout3D-v3.glb')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.PumpHpElica.geometry} material={materials.MetalGloss} position={[17.687, 22.018, 12.176]} rotation={[0, -0.003, 0.022]} scale={2.345} />
