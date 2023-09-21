@@ -1,6 +1,7 @@
 .menu-container
 {
-    /*config position inner */
+    position: absolute;
+    bottom: 25px;
     display: flex;
     align-items: center;
     justify-content: center;

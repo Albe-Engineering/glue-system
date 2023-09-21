@@ -1,5 +1,21 @@
 #footer{
-    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     width: 100%;
+    height: 5vh;
     background-color: var(--grey-background);
+}
+
+
+#footer p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-text);
+    font-size: 3-px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    height: 10px;
 }
