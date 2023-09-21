@@ -5,9 +5,9 @@ import Menu from "../Menu/Index";
 function Footer() {
   return (
     <div id="footer">
-      <p>text</p>
+      <p>Account: Albe support</p>
       <Menu />
-      <p>text</p>
+      <p>Status: Active</p>
     </div>
   );
 }
