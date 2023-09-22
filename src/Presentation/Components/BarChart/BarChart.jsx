@@ -6,17 +6,16 @@ import {
     YAxis,
     CartesianGrid,
     Tooltip,
-    // Legend,
-    Label,
-    // LabelList, 
+    ReferenceLine,
     ResponsiveContainer
   } from "recharts";
-import '../../Assets/Styles/BarChart.css';
+import '../../Assets/Styles/Chart.css';
 
 
-  function MyBarChart(props){
+function MyBarChart(props){
     return (
-        <ResponsiveContainer width="100%" height={200}>
+      <div style={{width:"100%", height:"Calc(100vh/5)" }}>
+        <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={props.data}
             margin={{
@@ -29,22 +28,15 @@ import '../../Assets/Styles/BarChart.css';
             barGap={0}
           >
             <CartesianGrid opacity={0.1} vertical={false}/>
-    
+           
             <XAxis 
                 dataKey="name"
                 tick={{fill: '#ebeefe'}} 
                 style={{
                     fontSize: '0.8rem',
                     fontFamily: 'Times New Roman',
-                }}>
-                <Label 
-                    value="Glue Injectors" offset={0} position="insideTop"
-                    fontSize={16}
-                    fill={'#ebeefe'}
-                    dy={-175}
-                />
-            </XAxis>
-            
+                }} />
+
             <YAxis 
                 domain={[0, 100]}
                 tick={{fill: '#ebeefe'}} 
@@ -52,6 +44,9 @@ import '../../Assets/Styles/BarChart.css';
                     fontSize: '0.8rem',
                     fontFamily: 'Times New Roman',
                 }} />
+            
+            <ReferenceLine y={100} label={{ value: 'Glue Inejctors', fill: 'white' }} stroke='transparent' />    
+            
             <Tooltip 
                 content={<BarCustomTooltip />}
                 cursor={{fill: 'rgba(96, 96, 96, 0.37)'}}
@@ -78,7 +73,8 @@ import '../../Assets/Styles/BarChart.css';
           </BarChart>
          
         </ResponsiveContainer>
-        );
+      </div>
+    );
   }
 
   function BarCustomTooltip({active, payload, label}){
@@ -95,4 +91,6 @@ import '../../Assets/Styles/BarChart.css';
         </div>
     }
 }
+
+
   export default MyBarChart;

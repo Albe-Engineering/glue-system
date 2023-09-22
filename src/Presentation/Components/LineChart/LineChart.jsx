@@ -6,14 +6,15 @@ import {
     YAxis, 
     CartesianGrid, 
     Tooltip, 
-    Label,
+    ReferenceLine,
     ResponsiveContainer } from 'recharts';
-
+import '../../Assets/Styles/Chart.css';
 
 
 function MyLineChart(props){
   return (
-    <ResponsiveContainer width="100%" height={200}>
+    <div style={{width:"100%", height:"Calc(100vh/5)" }}>
+    <ResponsiveContainer width="100%" height="100%">
       <AreaChart 
         data={props.data}
         margin={{ 
@@ -43,14 +44,7 @@ function MyLineChart(props){
                 style={{
                     fontSize: '0.5rem',
                     fontFamily: 'Times New Roman',
-                }}>
-                <Label 
-                  value="Pressure" offset={0} position="insideTop"
-                  fontSize={16}
-                  fill={'#ebeefe'}
-                  dy={-175}
-                />
-        </XAxis>
+                }} />
 
         <YAxis 
           domain={[0, 200]}
@@ -58,8 +52,9 @@ function MyLineChart(props){
           style={{
               fontSize: '0.8rem',
               fontFamily: 'Times New Roman',
-          }}> 
-        </YAxis>
+          }} />
+
+        <ReferenceLine y={200} label={{ value: 'Glue Pressure', fill: 'white' }} stroke='transparent' />   
        
         <Tooltip 
           content={<BarCustomTooltip />}
@@ -71,6 +66,7 @@ function MyLineChart(props){
         <Area type="monotone" dataKey="sp" stroke="#FFF" fillOpacity={1} fill="url(#colorsp)" />
       </AreaChart>
   </ResponsiveContainer>
+  </div>
   )
 }
 

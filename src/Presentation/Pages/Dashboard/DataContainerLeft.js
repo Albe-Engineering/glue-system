@@ -10,26 +10,28 @@ import DataPressure from '../../Data/pressure.json'
 function DataContainerLeft(){   
     const dataInj = InjectorsData;
     const dataPressure = DataPressure;
+    const HpSpeedSL = DataAnalogValue[0];
+    const HpPressureSL = DataAnalogValue[1];
 
     return(
         <div id='DataContainerLeft' className='DataContainer'>
             <h2> Dosing SL </h2>
             <div className="Widget-row">
                 <AnalogValue 
-                    value={DataAnalogValue[0].value}
-                    unit={DataAnalogValue[0].unit}
-                    title={DataAnalogValue[0].title}
-                    warn={DataAnalogValue[0].warn}
-                    alm={DataAnalogValue[0].alm}
+                    value={HpSpeedSL.value}
+                    unit={HpSpeedSL.unit}
+                    title={HpSpeedSL.title}
+                    warn={HpSpeedSL.warn}
+                    alm={HpSpeedSL.alm}
                 />
             </div>
             <div className="Widget-row">
                 <AnalogValue 
-                    value={DataAnalogValue[1].value}
-                    unit={DataAnalogValue[1].unit}
-                    title={DataAnalogValue[1].title}
-                    warn={DataAnalogValue[1].warn}
-                    alm={DataAnalogValue[1].alm}
+                    value={HpPressureSL.value}
+                    unit={HpPressureSL.unit}
+                    title={HpPressureSL.title}
+                    warn={HpPressureSL.warn}
+                    alm={HpPressureSL.alm}
                 />
             </div>
             <div className="Widget-row">
